@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Area Calculator</title>
+	<!-- SETUP BOOTSTRAP: link to Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- link to JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Add style -->
+  <link rel="stylesheet" type="text/css" href="style.css">  
+</head>
+<body>
+<div class="container">
+<h1 class="text-info">Area of a Rectangle</h1>
+<br>
+<img src="prectangle.jpg">
+<form action="">
+	<label for="height">Height: </label>
+	<input type="text" class="form-control" name="height" id="h-value">
+
+	<label for="height">Width: </label>
+	<input type="text" class="form-control" name="width" id="w-value">
+
+	<h3 id="areaRect">The area of the rectangle is?</h3>
+
+ <button type="button" class="btn btn-primary" onclick="area(height,width)">
+ COMPUTE
+ <button type="button"class="btn btn-info text-muted" onClick="window.location.reload()">RELOAD
+ </button>
+ </button>
+</form>
+ 
+
+ <script>
+ 	function area(height,width) {
+ 		var height= document.getElementById('h-value').value;
+		var width= document.getElementById('w-value').value;
+		var r_area= height * width;
+		var rr_area= r_area.toFixed(2);
+		document.getElementById('areaRect').innerHTML= 'The answer is '+ rr_area + '.'
+ 	}
+ </script>
+
+</div>
+</br>
+<div id="footer">
+		<p> © 2025 | Submitted by: Ashley Rose C. Gozum | 9-Emerald</p>
+		</div>
+
+</body>
+</html>
